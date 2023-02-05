@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-image: url(photo.jpeg);
+    background-image: url(static/photo.jpeg);
     background-size: 100%;
     background-attachment: scroll;
     background-repeat: no-repeat;
