@@ -3,33 +3,41 @@ html {
 }
 
 body {
-    background-image: url(static/photo.jpeg);
+    margin: 0%;
+    background-color: #e6e5e5;
+}
+
+.header {
+    background-image: url(static/photo.jpg);
     background-size: 100%;
     background-attachment: scroll;
     background-repeat: no-repeat;
-    margin: 0%;
-    background-color: #d1cdcd;
+    margin-bottom: 20px;
 }
 
-.button-up{
+
+.button-up {
     position: fixed;
     bottom: 28px;
     right: 28px;
     z-index: 9;
-  }
-  .button-up a {
+}
+
+.button-up a {
     height: 42px;
     width: 42px;
     text-align: center;
+    text-decoration: none;
     background: #15141494;
     display: block;
     border-radius: 2px;
-  }
+}
 
 h2 {
     font-family: monospace;
     font-size: 45px;
-    color: #f0f0f0;
+    font-weight: lighter;
+    color: #746262;
     text-align: center;
     position: relative;
     padding: 5%;
@@ -37,50 +45,52 @@ h2 {
     margin-bottom: 0%;
 }
 
-ul.container-buttons {
+.container-buttons {
     display: flex;
     justify-content: space-around;
 }
 
-ul a.buttons {
-    text-decoration: none;
+.container-buttons a.buttons {
     font-size: 15px;
     width: 5.5cm;
     padding: 5px 0;
+    margin-right: 5px;
 }
 
 .buttons {
-    color: rgb(121, 120, 118);
-    background-color: rgb(233, 231, 228);
+    color: rgb(134, 87, 81);
+    background-color: rgb(196, 179, 174);
     font-family: monospace;
     border: 0;
     margin: 0 auto;
     align-self: center;
     display: block;
     text-align: center;
+    text-decoration: none;
 }
 
-h5 {
-    color: #eeeded;
+.about-course {
+    color: #ffffff;
     font-size: 20px;
     font-family: monospace;
+    text-shadow: 1px 1px 5px #2b2222;
     margin-top: 0%;
     padding-top: 5%;
     padding-left: 5%;
     padding-right: 5%;
-    background-color: #2525257a;
+    background-color: #7c4646a8;
     position: relative;
-    top: -100px;
     margin-bottom: 0%;
     padding-bottom: 2%;
 }
 
-h5 a.buttons {
+.about-course a.buttons {
     font-size: 30px;
     margin-top: 0;
     width: 7cm;
-    height: 1.8cm;
+    padding: 10px 0;
     text-decoration: none;
+    background-color: rgb(241, 235, 233);
 }
 
 .title {
@@ -100,8 +110,11 @@ h5 a.buttons {
     font-family: monospace;
     font-weight: 100;
     margin: 3%;
-    padding-bottom: 5px;
+    height: 398px;
 }
+.tarif img { height: 100%;}
+
+.title .tarif .buttons { display: inline;}
 
 .title .tarif p {
     font-size: 20px;
@@ -113,6 +126,7 @@ h5 a.buttons {
     font-size: 15px;
     width: 70%;
 }
+
 .title .tarif p+p+p {
     color: #914e4e;
     font-size: 30px;
@@ -181,6 +195,7 @@ h5 a.buttons {
     margin-left: 3%;
     margin-right: 3%;
 }
+
 .registration {
     color: #acabab;
     background-color: #3b3b3b;
@@ -190,13 +205,19 @@ h5 a.buttons {
     padding: 3%;
     width: 1150px;
 }
+
 .first_part_of_registration {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .information_block {
     width: 40%;
+}
+
+.course-type {
+    padding-left: 5%;
 }
 
 .course-type--block {
@@ -208,27 +229,31 @@ h5 a.buttons {
 .course-type--block input {
     margin: 0 15px 0 5px;
 }
-input.input_text{
+
+input.input_text {
     margin-top: 2%;
     margin-bottom: 5%;
     height: 1cm;
     width: 12cm;
 }
-input.input_question{
-    height: 5cm;
-    width: 10cm;
+
+input.input_question {
+    height: 3cm;
+    width: 27cm;
     margin-top: 2%;
+    margin-left: 5%;
 }
+
 .registration button {
     text-decoration: none;
     font-size: 20px;
     width: 8cm;
     height: 1.5cm;
-    color: rgb(65, 116, 105);
-    background-color: rgb(179, 230, 230);
+    color: rgb(37, 48, 45);
+    background-color: rgb(175, 194, 202);
     font-family: monospace;
     border: 0;
-    margin: 0 auto;
+    margin-top: 15px;
     align-self: center;
     display: block;
     text-align: center;
@@ -241,25 +266,29 @@ input.input_question{
     padding-left: 2%;
     padding-right: 2%;
 }
+
 .limited {
     max-height: 26px;
     overflow: hidden;
     position: relative;
-  }
+}
 
-[data-more-checker^="read-more"]:checked ~ .limited {
+[data-more-checker^="read-more"]:checked~.limited {
     max-height: none;
 }
+
 .limited .bottom {
     position: absolute;
     bottom: 0;
     width: 100%;
     transition: .3s;
 }
+
 [data-more-checker^="read-more"] {
     opacity: 0;
     position: absolute;
 }
+
 .read-more-button {
     font-family: monospace;
     font-size: 10px;
@@ -270,12 +299,15 @@ input.input_question{
     border: 0;
     border-radius: 4px;
 }
-[data-more-checker^="read-more"] ~ .read-more-button:before {
+
+[data-more-checker^="read-more"]~.read-more-button:before {
     content: 'View answer';
 }
-[data-more-checker^="read-more"]:checked ~ .read-more-button:before {
+
+[data-more-checker^="read-more"]:checked~.read-more-button:before {
     content: 'Hide answer';
 }
+
 .question {
     font-family: monospace;
     font-size: 20px;
@@ -287,18 +319,20 @@ input.input_question{
     font-size: 15px;
     color: #1f1515;
 }
+
 .secons_frame_for_question input {
     height: 200px;
     width: 1175px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 .secons_frame_for_question button {
     text-decoration: none;
     font-size: 15px;
     width: 5.5cm;
     color: rgb(121, 120, 118);
-    background-color: rgb(233, 231, 228);
+    background-color: rgb(196, 212, 203);
     font-family: monospace;
     border: 0;
     margin-top: 5px;
