@@ -11,6 +11,21 @@ body {
     background-color: #d1cdcd;
 }
 
+.button-up{
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9;
+  }
+  .button-up a {
+    height: 42px;
+    width: 42px;
+    text-align: center;
+    background: #15141494;
+    display: block;
+    border-radius: 2px;
+  }
+
 h2 {
     font-family: monospace;
     font-size: 45px;
@@ -68,7 +83,7 @@ h5 a.buttons {
     text-decoration: none;
 }
 
-h4 {
+.title {
     font-family: monospace;
     font-size: 40px;
     color: #2b2a2a;
@@ -78,39 +93,39 @@ h4 {
     margin-bottom: 0;
 }
 
-h6 {
+.title .tarif {
     color: #acabab;
     background-color: #3b3b3b;
     font-size: 30px;
     font-family: monospace;
     font-weight: 100;
-    margin-right: 100px;
+    margin: 3%;
     padding-bottom: 5px;
 }
 
-h6 p {
+.title .tarif p {
     font-size: 20px;
     width: 50%;
 }
 
-h6 p+p {
+.title .tarif p+p {
     padding-top: 10px;
     font-size: 15px;
     width: 70%;
 }
-h6 p+p+p {
+.title .tarif p+p+p {
     color: #914e4e;
     font-size: 30px;
     font-family: monospace;
 }
 
-h6 a.buttons {
+.title .tarif a.buttons {
     font-size: 30px;
     width: 7cm;
     height: 1cm;
 }
 
-h4+h5 {
+.subtitle {
     color: #a5a5a5;
     font-size: 20px;
     font-family: monospace;
@@ -135,6 +150,7 @@ h4+h5 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 2%;
 }
 
 .course-part .course-part-title {
@@ -156,32 +172,137 @@ h4+h5 {
     content: "• ";
 }
 
-h4 p {
+.title p {
     color: #7a664a;
     font-size: 25px;
     font-family: monospace;
-    line-height: 2;
+    line-height: 1.5;
     font-weight: lighter;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 .registration {
     color: #acabab;
     background-color: #3b3b3b;
-    font-size: 30px;
+    font-size: 20px;
     font-family: monospace;
-    font-weight: 100;
-    margin-right: 100px;
+    margin: 3%;
+    padding: 3%;
+    width: 1150px;
 }
-
-.course-type {
+.first_part_of_registration {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.information_block {
+    width: 40%;
 }
 
 .course-type--block {
     display: flex;
     align-items: center;
+    margin-top: 2%;
 }
 
 .course-type--block input {
     margin: 0 15px 0 5px;
+}
+input.input_text{
+    margin-top: 2%;
+    margin-bottom: 5%;
+    height: 1cm;
+    width: 12cm;
+}
+input.input_question{
+    height: 5cm;
+    width: 10cm;
+    margin-top: 2%;
+}
+.registration button {
+    text-decoration: none;
+    font-size: 20px;
+    width: 8cm;
+    height: 1.5cm;
+    color: rgb(65, 116, 105);
+    background-color: rgb(179, 230, 230);
+    font-family: monospace;
+    border: 0;
+    margin: 0 auto;
+    align-self: center;
+    display: block;
+    text-align: center;
+}
+
+.holder {
+    background-color: #897baa;
+    width: 88%;
+    margin-top: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.limited {
+    max-height: 26px;
+    overflow: hidden;
+    position: relative;
+  }
+
+[data-more-checker^="read-more"]:checked ~ .limited {
+    max-height: none;
+}
+.limited .bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transition: .3s;
+}
+[data-more-checker^="read-more"] {
+    opacity: 0;
+    position: absolute;
+}
+.read-more-button {
+    font-family: monospace;
+    font-size: 10px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+    color: #0b0b0cad;
+    border: 0;
+    border-radius: 4px;
+}
+[data-more-checker^="read-more"] ~ .read-more-button:before {
+    content: 'View answer';
+}
+[data-more-checker^="read-more"]:checked ~ .read-more-button:before {
+    content: 'Hide answer';
+}
+.question {
+    font-family: monospace;
+    font-size: 20px;
+    color: #2b2222;
+}
+
+.ansver {
+    font-family: monospace;
+    font-size: 15px;
+    color: #1f1515;
+}
+.secons_frame_for_question input {
+    height: 200px;
+    width: 1175px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.secons_frame_for_question button {
+    text-decoration: none;
+    font-size: 15px;
+    width: 5.5cm;
+    color: rgb(121, 120, 118);
+    background-color: rgb(233, 231, 228);
+    font-family: monospace;
+    border: 0;
+    margin-top: 5px;
+    align-self: center;
+    display: block;
+    text-align: center;
 }
