@@ -26,9 +26,11 @@ body {
 .button-up a {
     height: 42px;
     width: 42px;
+    font-size: 30px;
     text-align: center;
     text-decoration: none;
     background: #15141494;
+    color: #2b2a2a;
     display: block;
     border-radius: 2px;
 }
@@ -62,6 +64,7 @@ h2 {
     background-color: rgb(196, 179, 174);
     font-family: monospace;
     border: 0;
+    border-radius: 5%;
     margin: 0 auto;
     align-self: center;
     display: block;
@@ -110,33 +113,39 @@ h2 {
     font-family: monospace;
     font-weight: 100;
     margin: 3%;
+    padding-left: 2%;
     height: 398px;
+    width: 90% auto;
 }
 .tarif img { height: 100%;}
 
 .title .tarif .buttons { display: inline;}
 
-.title .tarif p {
+.title .tarif .course-descriptions {
+    padding-top: 3%;
     font-size: 20px;
     width: 50%;
 }
 
-.title .tarif p+p {
-    padding-top: 10px;
+.title .tarif .additional-info {
+    padding-top: 4%;
     font-size: 15px;
     width: 70%;
 }
 
-.title .tarif p+p+p {
+.title .tarif .price {
     color: #914e4e;
     font-size: 30px;
     font-family: monospace;
+    padding-top: 5%;
 }
 
 .title .tarif a.buttons {
     font-size: 30px;
     width: 7cm;
     height: 1cm;
+    padding-left: 7%;
+    padding-right: 7%;
 }
 
 .subtitle {
@@ -146,6 +155,7 @@ h2 {
     background-color: transparent;
     padding-left: 2%;
     margin-top: 10px;
+    margin-bottom: 3%;
 }
 
 .course-content {
@@ -188,12 +198,19 @@ h2 {
 
 .title p {
     color: #7a664a;
-    font-size: 25px;
+    font-size: 24.5px;
     font-family: monospace;
+    text-align: justify;
     line-height: 1.5;
     font-weight: lighter;
     margin-left: 3%;
     margin-right: 3%;
+    height: 398px;
+    width: 90% auto;
+}
+.title img {
+    height: 100%;
+    margin-left: 2%;
 }
 
 .registration {
